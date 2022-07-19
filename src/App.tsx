@@ -5,15 +5,20 @@ import HomePage from "./pages/HomePage";
 import RoadmapPage from "./pages/RoadmapPage";
 import ReactGA from "react-ga4";
 
+import SEO from "./components/SEO";
+
 function App() {
   
   ReactGA.initialize( 'G-GQDL3TBPEZ');
   ReactGA.send({hitType: "pageview", page: window.location.pathname + window.location.search});
   return (
+    <>
+    <SEO />
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/roadmap/:name" element={<RoadmapPage />} />
     </Routes>
+    </>
   );
 }
 

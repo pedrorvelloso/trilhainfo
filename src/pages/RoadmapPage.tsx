@@ -9,6 +9,7 @@ import { data as communityData } from "../roadmaps/community";
 import E404Page from "./E404Page";
 import useDocumentTitle from "../components/useDocumentTitle";
 import { useRef } from "react";
+import SEO from "../components/SEO";
 
 export default function RoadmapPage() {
   const { name } = useParams<string>();
@@ -21,10 +22,9 @@ export default function RoadmapPage() {
     community: { file: communityData, title: "Comunidade" },
   };
 
-  useDocumentTitle("Trilha Info - " + roadmaps[name || ""].title);
-
   return (
     <>
+    <SEO title={'Trilha Info - ' + roadmaps[name || ""].title} />
       <MainLayout>
         <p className="mt-4 text-center font-semibold c-brown">
           Não sabe por onde começar a estudar? Que tal dar uma olhada por aqui?
