@@ -16,7 +16,7 @@ const defaultDescription = `Não sabe por onde começar a estudar? Que tal dar u
 export default function SEO({ 
   title = 'Trilha Info', 
   description = defaultDescription, 
-  keywords = 'trilha, frontend, backend, devops', 
+  keywords = 'trilha, frontend, backend, devops, comunidade', 
   image = origin + imagePreview
 }: Props) {
   return (
